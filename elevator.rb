@@ -5,19 +5,28 @@
 # Simuler un ascensceur simple 
 # Issu de www.codewars.com
 
-def goto(niveau_actuel, bouton_app)
-	niveaux=[0,1,2,3]
-	boutons=["0","1","2","3"]
-	monte=0
-	if niveaux.include?(niveau_actuel) && boutons.include?(bouton_app)
-		monte=bouton_app.to_i - niveau_actuel
-	else
-		monte=0 	
+
+class Elevator
+	attr_accessor :etage
+	attr_reader :niveaux, :boutons
+	def initialize(etage_ini)
+		@etage=etage_ini
+		@niveaux=[0,1,2,3]
+		@boutons=["0","1","2","3"]
 	end
-	puts monte
-	return monte
-end
 
-goto(undefined,'2')
+	def goto(niveau_actuel, bouton_app)
+		monte=0
+		if niveaux.include?(niveau_actuel) && boutons.include?(bouton_app)
+			monte=bouton_app.to_i - niveau_actuel
+		else
+			monte=0 	
+		end
+		return monte
+	end
+end 
 
+mon_asc = Elevator.new(0)
+mon_asc.etage = mon_asc.goto(mon_asc.etage,"3")
+puts mon_asc.etage
 
