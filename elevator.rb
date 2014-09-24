@@ -8,13 +8,14 @@ def goto(niveau_actuel, bouton_app)
 	boutons=["0","1","2","3"]
 	monte=0
 	if niveaux.include?(niveau_actuel) && boutons.include?(bouton_app)
-		monte=0
+		monte=bouton_app.to_i - niveau_actuel
 	else
-		monte=bouton_app.to_i - niveau_actuel 	
+		monte=0 	
 	end
+	puts monte
 	return monte
 end
 
-goto(4,"3")
+goto(undefined,'2')
 
 
