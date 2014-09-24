@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
-# Script pour s'exercer en ruby 
+# Author: Cedric Bleschet
+# Date: 27/03/2014
+# Purpose: Script pour s'exercer en ruby 
 # Simuler un ascensceur simple 
 # Issu de www.codewars.com
 
